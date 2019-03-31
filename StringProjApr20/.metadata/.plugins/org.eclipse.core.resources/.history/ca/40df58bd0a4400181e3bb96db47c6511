@@ -1,0 +1,12 @@
+
+public class StringComaprision {
+	public static void main(String[] args) {
+		String s1="Dinga";
+		String s2="Dingi";
+		String s3=new String("rama");
+System.out.println(s1.compareTo(s2));
+		
+		
+	}
+
+}

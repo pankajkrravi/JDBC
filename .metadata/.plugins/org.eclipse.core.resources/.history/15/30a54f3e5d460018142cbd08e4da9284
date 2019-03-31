@@ -1,0 +1,35 @@
+import java.sql.*;
+import java.util.Scanner;
+public class ExecuteDemo {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		String url="com:mysql://localhost:3306/jdbcdb";
+		String un="pankaj";
+		String pwd="root";
+		//1. load& register driver
+		Class.forName("com.mysql.jdbc.Driver");
+		//2. Establish connection
+		Connection con=DriverManager.getConnection(url,un,pwd);
+		//3. create statement
+		Statement stmt=con.createStatement();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the sql query");
+		String query=sc.next();
+	//4. excute the query
+		boolean b=stmt.execute(query);
+		if(b==true)//select query
+		{
+			ResultSet rs=stmt.executeQuery(query);
+			while(rs.next())
+			{
+				System.out.println(rs.getInt(1)+"  ,"+rs.getString(2+"  ,"+rs.getDouble(3)));
+			}
+		}
+		else
+		{
+			int count=stmt.executeUpdate(query);
+			System.out.println("no of rows effected = "+count);
+		}
+		stmt.close();
+		con.close();
+	}
+}

@@ -1,0 +1,9 @@
+
+public class ChararraytoString {
+	public static void main(String[] args) {
+		char c[]={'w','e','l','c','o','m','e',' ','t','o',' ','s','p','i','d','e','r','s'};
+		String s=new String(c);
+		System.out.println(s);
+	}
+
+}

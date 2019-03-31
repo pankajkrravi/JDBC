@@ -1,0 +1,18 @@
+import java.sql.*;
+public class InsertQuery {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		String url="jdbc:mysql://localhost:3306/jdbcdb";
+		String un="pankaj";
+		String pwd="root";
+		//1 load & gegister
+		Class.forName("com.mysql.jdbc.Driver");
+		//2. Establish the connection
+		Connection con=DriverManager.getConnection(url,un,pwd);
+		//3.Create a statement.
+		Statement stmt=con.createStatement();
+		String qur="INSERT INTO student VALUES(6,'dinga',88)";
+		//process the resultset
+		int count=stmt.executeUpdate(qur);
+		
+	}
+}

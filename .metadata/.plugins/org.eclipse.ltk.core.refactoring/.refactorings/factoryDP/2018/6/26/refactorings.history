@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;BankFactory.java, ICard.java, ICICI.java, SBI.java, TetsBank.java&apos; to &apos;src&apos;" description="Move 5 resources to &apos;src&apos;" destination="src" element1="/jbpDemo/src/jbpDemo/BankFactory.java" element2="/jbpDemo/src/jbpDemo/ICard.java" element3="/jbpDemo/src/jbpDemo/ICICI.java" element4="/jbpDemo/src/jbpDemo/SBI.java" element5="/jbpDemo/src/jbpDemo/TetsBank.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="5" stamp="1530105228155" updateReferences="true"/>
+</session>
